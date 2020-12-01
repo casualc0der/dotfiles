@@ -1,0 +1,18 @@
+" Remap leader key to space
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+" Turn off the annoyotron 4000
+set belloff=all
+
+" Set font
+set gfn=Monaco:h14
+
+" Disable bufergator as conflicts with rspec runner
+call janus#disable_plugin('buffergator')
+
+" Remap rspec keybinds
+ map <Leader>t :call RunCurrentSpecFile()<CR>
+ map <Leader>s :call RunNearestSpec()<CR>
+ map <Leader>l :call RunLastSpec()<CR>
+ map <Leader>a :call RunAllSpecs()<CR>
